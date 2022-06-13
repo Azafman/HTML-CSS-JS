@@ -1,0 +1,84 @@
+body {
+     margin: 0;
+     padding: 0;
+}
+.wrapper {
+     height: 100vh;
+     width: 100vw;
+     background: rgb(53,53,53);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+.chatbox {
+     width: 8rem;
+     height: 4rem;
+     border: 6px solid #949494;
+     border-radius: 36px;
+     padding: 0 1rem;
+     animation: chatboxTranslate infinite 3s;
+     /*obs: mesmo eu dizendo a largura, ao colocar essa paddingminha largura aumenta*/
+     box-sizing: border-box;
+     /*box-sizing
+     A propriedade CSS box-sizing é utilizada para alterar a propriedade padrão da box model, usada para calcular larguras (widths) e alturas (heights) dos elementos. É possível usar essa propriedade para emular o comportamento dos navegadores (browsers) que não suportam corretamente a especificação da propriedade CSS box model.
+     border-box
+     
+     border-box:As propriedades de largura (width) e de altura (height) incluem o tamanho padding size e a propriedade border, mas não incluem a propriedade margin.
+     É como se eu dissesse: o padding de 0 e 1rem estão inclusos na largura e altura dita. Ele muda de fora pra dentro, vai ter efeito com os elementos dentro dele.
+     */
+     display: flex;
+     justify-content: space-evenly;
+     /*deixa os elementos com espaçamentod iguais entre si e os lados*/
+     align-items: center;
+     position: relative;
+     transform: translateY(0);
+}
+.chatbox::before {
+     content: '';
+     width: 0;
+     height: 0;
+     border-top: 17px solid #949494;
+     border-left: 2px solid transparent;
+     border-right: 17px solid transparent;
+     position: absolute;
+     bottom: -1.3rem;
+     left: 2rem;
+
+}
+.chatbox__loading {
+     width: 10px;
+     height: 10px;
+     background-color: #949494;
+     border-radius: 50%;
+     transform: scale(1);
+     animation: zoomChatbox infinite 2s ease;
+}
+@keyframes zoomChatbox {
+     0% {
+          transform: scale(1)
+     } 50% {
+          transform: scale(1.4);
+     } 100% {
+          transform: scale(1);
+     }
+}
+.chatbox__loading:nth-child(1){
+     animation-delay: 0s;
+}
+.chatbox__loading:nth-child(2){
+     animation-delay: 0.4s;
+}
+.chatbox__loading:nth-child(3){
+     animation-delay: 0.6s;
+}
+
+@keyframes chatboxTranslate {
+     0%{
+          transform: translateY(0);
+     }50%{
+          transform: translateY(15px);
+     }
+     100%{
+          transform: translateY(0);
+     }
+}

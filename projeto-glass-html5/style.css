@@ -1,0 +1,219 @@
+@charset "utf-8";
+@font-face{
+	font-family:'fntguab';
+	src:url("_fonts/bubblegum-sans-regular.otf");
+}
+@font-face{
+	font-family: 'fntsubguab';
+	src:url("static/Oswald-Medium.ttf");
+}
+body{
+	background: #cecece;
+	font-family: Arial, sans-serif;
+} /*Fundo*/
+p{/*Todos os paragráfos*/
+	text-align: justify;
+	text-indent: 50px;
+} 
+a{
+	text-decoration: none;
+	color:#606060;
+}
+a:hover{
+	text-decoration: underline;
+	font-weight: bold;
+}
+#icone{
+	position: absolute;
+	right: 170px;
+	top:70px;
+}
+#cabecalho{
+	border-bottom: 1px #606060 solid;
+	height: 150px ;
+	background: url("_imagens/glass-logo-peq.jpg")no-repeat 0px 80px;
+}
+#cabecalho h1{
+	font-family: 'fntguab';
+	font-size: 30pt;
+	color:#606060;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.6);
+	margin-bottom: 0px;
+}
+#cabecalho h2{
+	font-family: 'fntsubguab';
+	font-size: 15pt;
+	color:#888888;
+	margin-top: 0px;
+}
+#corpo{
+	width: 500px;
+	display: block;
+	float: left;
+	padding-right: 10px;
+	border-right: 1px solid #606060;
+}
+#noticia-principal h2{
+	color:#635F5F;
+	background:#C5C5C5;
+	font-size: 18px;
+	padding: 5px 0px 5px 10px;
+	margin: 8px 0px;
+	font-family: arial;
+}
+#cabecalho-corpo h1{
+	font-family: 'fntguab';
+	color:#606060;
+	font-size: 20pt;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+#cabecalho-corpo h2{
+	color: #cecece;
+	font-size: 13pt;
+	background: white;
+	margin-top:0px;
+}
+#cabecalho-corpo h3{
+	font-size: 13px;
+	color:#606060;
+}
+.dir{
+	text-align: right;
+}
+.tblindex{
+	border: 1px solid #606060;
+	border-spacing: 0px;
+	font-family: Arial, sans-serif;
+	margin: 0px auto;
+	width: 430px;
+	height: 200px;
+}
+.tblindex caption{
+	color: #6F6969;
+	font-weight: 700;
+	font-family: Arial;
+}
+.subtitulotbl{
+	float: right;
+	font-size: 12px;
+	margin: 5px 5px 0px;
+}
+#ladoesqr{
+	background: #606060;
+	color: white;
+	text-align: right;
+	padding: 0px 5px 1px 0px;
+	font-weight: 550;
+}
+#ladodir{
+	border: 1px solid #606060;
+	padding: 1px 1px 1px 5px;
+	background: #B5B5B5;
+}
+#lateral{
+	display:block;
+	width: 375px;
+	float: right;
+	background: #DDDDDD;
+	margin-top: 10px;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.5);
+}
+#lateral h1{
+	font-family: 'fntguab',sans-serif;
+	color:#606060;
+	font-size:20pt;
+	margin:10px;
+}
+#lateral h2{
+	background: #606060;
+	color:#ffffff;
+	padding: 5px;
+	font-size:18px;
+	margin: 10px;
+}#lateral p{
+	margin: 0px 10px;
+}
+#rodape{
+	clear: both;
+	border-top: 1px #606060 solid;
+}
+#rodape p{
+	text-align: center;
+}
+
+
+/*Formatação img c/efeitos*/
+#inteface{
+	width:900px;
+	background: #FFFFFF;
+	margin:-10 auto 0px auto;
+	box-shadow: 0px 0px 10px rgba(0,0,0,.5);
+	padding: 10px;
+}
+figure.foto-legenda{
+	position: relative;
+	border: #FFFFFF solid 4px;
+	box-shadow: 1px 1px 4px black;
+}
+figure.foto-legenda img{
+	width: 100%; 
+	height: 270px;
+}
+figure.foto-legenda figcaption{
+	opacity: 0;
+	position:absolute;
+	top:0;
+	background-color:rgba(0,0,0,.4);
+	color:white;
+	width: 100%; height: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+	transition: opacity 1s;
+}
+figure.foto-legenda:hover figcaption{
+	opacity: 1;
+}
+
+/*Formatação menu de navegação*/
+#menu{ /*fazendo todo conteúdo virar um tipo de bloco para poder se movimentar na tela*/
+	display: block;
+}
+#menu ul { /*definindo a posição do menu e tirando o simbolo que antedece a frase*/
+	list-style: none;
+	position:absolute;
+	top:-20px;
+	left:430px;
+}
+#menu ul li{/* tds as letras em maiusc, todos os li em uma só linha e formatação*/
+	
+	text-transform: uppercase;
+	display:inline-block;
+	background: #DDDDDD;
+	padding: 10px;
+	margin: 2px;
+	/*prefixr -Códigos para rodar em pcs antigos*/
+	webkit-transition: background-color 1s;
+	o-transition: background-color 1s;
+	transition: background-color 1s;
+}
+#menu ul li:hover{
+
+	background:#606060;}
+#menu a{
+	color:black;
+	text-decoration: none;
+}
+#menu a:hover{
+	color:white;
+}
+#menu h1{ /*Fazendo oh1 de nav desaparecer*/
+	display: none;
+}
+.videoindex {
+	margin: 15px auto;
+}
+.videoindex2 {
+	width: 350px; 
+	margin: 10px 10px;
+}

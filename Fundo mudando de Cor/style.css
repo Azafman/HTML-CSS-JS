@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Fruktur&family=Noto+Sans:wght@300;400&display=swap');
+
+body {
+     margin: 0;
+     padding: 0;
+     font-family: 'cinzel', sans-serif;
+}
+.wrapper {
+     width: 100vw;
+     height: 100vh;
+     background: linear-gradient(50deg, #897d7d, #775353, #aa5d5d, #db7171,#ce9090);
+     display: flex;/*poem tudo na mesma linha*/
+     justify-content: center;/*centraliza todo conteudo horizontalmente dentro de si*/
+     align-items: center;/*centraliza verticalmente*/
+     flex-direction: column;
+     /*como se fosse um zoom*/
+     animation: alterandoFundo infinite ease-in-out;
+     animation-duration: 8s;
+     background-size: 400% 400%;
+}
+/* 
+     # A propriedade CSS background-position define a posição inicial
+     # A propriedade background-size do CSS especifica o tamanho das imagens de fundo.
+     documentação MDN
+*/
+@keyframes alterandoFundo {
+     0%{
+          background-position: 0% 100%;
+     }50%{
+          background-position: 85% 10%;
+     }100%{
+          background-position: 0% 100%;
+     }
+}
+.wrapper h1, h2 {
+     letter-spacing: 3px;
+}
+.social-media{
+     margin-top: 1rem;
+     display: flex;
+     /*todo conteudo com esse display ficará um do lado do outro*/
+}
+a {
+     text-decoration: none;
+     font-size: 25px;
+     border: 2px solid black;
+     padding: 1rem 4.3rem;
+     color: black;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     transition: 0.7s cubic-bezier(0.932,0.522,0.423,0.332);
+     /* transition: 0.7s ease-out cubic-bezier(0.932,0.522,0.423,0.332);
+     ease e cubic-bezier não funcionam juntos, aparentemente */
+     
+}
+
+a:hover {
+     background-color: black;
+     color: white;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisador de Números!</title>
+    <style>
+        body {
+            background: #606060;
+        }
+        h1 {
+            text-align: center;
+            font: 25pt normal;
+        }
+        section {
+            background: white;
+            width: 600px;
+            padding: 10px 20px;
+            margin: auto;
+            border-radius: 13px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 10px;
+            font: 14pt normal;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1>Analisador de Números:</h1>
+    <section>
+        <div>
+            <p>Número (de 1 a 100): <input type="number" name="txtnum" id="cxnum"> <input type="button" value="Adicionar" id="adicionar" onclick="adc()"></p>
+            <p><select name="obj" id="objsele" size="5"></select></p>
+            <input type="button" value="Adicionar" onclick="exporinformacoes()">
+        </div>
+        <div id="result"></div>
+    </section>
+    <footer>©Curso em Vídeo</footer>
+    <script src="modelo.js"></script>    
+</body>
+</html>

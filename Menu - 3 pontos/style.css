@@ -1,0 +1,80 @@
+* {/*aplica estilo para todos os itens*/
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+}
+.wrapper {
+     background: #198699;
+     width: 100%;
+     height: 100vh; /*tudo o que estiver disponível verticalmente*/
+     display:flex;
+     justify-content: center;
+     align-items: center;
+}
+.checkbox {
+     height: 100px;
+     width: 100px;
+     display: flex;
+     justify-content: center;
+     position: relative;
+     cursor: pointer;
+}
+.checkbox .trace {
+     width: 90px;
+     height: 8px;
+     background-color: black;
+     position: absolute; /*deixa o trace absoluto em relação ao seu  pai*/
+     border-radius: 6px;
+     transition: 0.5s ease-out;
+     /* 
+          ease-in-out -> transição começa lenta e acaba lenta 
+          ease-in -> transição começa lenta e acaba rápida
+          ease-out -> transição começa rápida e acab lenta
+     */
+}
+#toggle {
+     display: none;
+     /* Desabilita a exibição do elemento (sem afetar o layout); todos os elementos filhos também tem sua exibição desabilitada. O documento é renderizado como se o elemento não existisse. */
+}
+.checkbox .trace:nth-child(1){
+     top: 0;
+     /* transform: rotate(0);    não altera o resultado*/
+}
+.checkbox .trace:nth-child(2){
+     top: 22px;
+     /* transform: rotate(0);  não altera o resultado*/
+}
+.checkbox .trace:nth-child(3){
+     top: 44px;
+     /* transform: rotate(0); não altera o resultado*/
+}
+/* 
+      <div class="checkbox-wrapper">
+               <input type="checkbox" id="toggle">
+               <label for="toggle" class="checkbox">
+                    <div class="trace"></div>
+                    <div class="trace"></div>
+                    <div class="trace"></div>
+               </label>
+          </div>
+          é importante que os elementos estejam nesta ordem
+*/
+#toggle:checked + .checkbox .trace:nth-child(1) {
+     transform: rotate(45deg);
+     top: 20px;
+     /*
+      rotate -> gira -> graus (deg)
+      translate -> mexe ele de lugar
+      */
+}
+#toggle:checked + .checkbox .trace:nth-child(2){
+     transform: translateX(-100px);
+     opacity: 0;
+     visibility: hidden;
+     width: 30px;
+     background: #198699;
+}
+#toggle:checked + .checkbox .trace:nth-child(3) {
+     transform: rotate(-45deg);
+     top: 20px;
+}

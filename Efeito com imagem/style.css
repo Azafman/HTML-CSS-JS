@@ -1,0 +1,73 @@
+body {
+     font-family: sans-serif;
+}
+
+.container {
+     width: 100%;
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+.card {
+     height: 400px;
+     width: 500px;
+     background: url(czechia-gf9d2631b5_640.jpg);
+     background-size: cover; /*fAZ COM Q O A IMAGEM TENTE CORIR TODA A ÁREA */
+     background-repeat: no-repeat;
+     background-position: center;
+     display: flex;/*ALINHA O QUE ESTIVER DENTRO DELE*/
+     justify-content: center;/*ALINHA O QUE ESTIVER DENTRO DELE*/
+     align-items: center;/*ALINHA O QUE ESTIVER DENTRO DELE*/
+     filter: saturate(0.3);/*EFEITO*/
+     color: white;
+     cursor: pointer;
+     transition: 0.3s;/*O TRANSITION PRECISA ESTAR AQUI POIS SE NÃO O HOVER TERÁ EFEITO SÓ NA IDA*/
+}
+.card-wrapper {
+     text-align: center;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     position : relative; /*FIZ ISTO PARA QUE O CARD WRAPPER SEJA RELATIVO A SUA DIV PARENT CARD, E OS ELEMENTOS CHILD IRÃO SER ABSOLUTOS EM RELAÇÃO AO CARD-WRAPPER*/
+}
+.card-wrapper::before{/*qualquer dúvida ler doumentação sobre ::before*/
+     content: '';/*content é o conteúdo*/
+     width: 100px;
+     height: 100px;
+     border: 2px solid white;
+     position: absolute;
+     opacity : 0;
+     transition: 0.3s;
+}
+.card-wrapper h2{
+     font-size: 40px;
+     text-transform: uppercase;
+     letter-spacing: 3px;
+     margin: 0;
+     transition: 0.3s;
+}
+.card-wrapper p {
+     font-size: 0px; /*Deixar assim, me retornará em efeito de crescimento da fonte no futuro, analisr código atentamente...*/
+     font-weight: bold;
+     text-transform: uppercase;
+     transition: 0.5s;
+     visibility: hidden;/*fica esondido*/
+     opacity: 0;/*fica esondido*/
+}
+.card:hover {
+     filter: saturate(1.5);
+}
+.card:hover > .card-wrapper::before {
+     opacity: 1;
+     width: 400px;
+     height: 300px;
+     visibility: visible;
+}
+.card:hover > .card-wrapper p {
+     visibility: visible;
+     opacity: 1;
+     letter-spacing: 2pt;
+     font-size: 15px;
+}

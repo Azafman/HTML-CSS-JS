@@ -1,0 +1,62 @@
+body {
+    background: rgb(255, 255, 255);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    max-width: 800px;
+    margin: auto;
+    padding: 10px 50px; 
+}
+header.cabecalho-pagtot{
+    text-align: center;
+}
+#title-princ, .title-secao, .titulo-dos-posts {
+    color: rgb(69, 69, 73);
+}
+#title-princ {
+    font-size: 27px;
+    
+}
+.titulo-dos-posts {
+    font-size: 15px;
+    text-transform: uppercase   ;
+}
+header p {
+    text-align: justify;
+}
+img.cabecalho {
+    width: 100px;
+    height: 100px;
+    margin-left: 10px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+.imgcodigo {
+    width: 100%;
+    height: 350px;
+    margin-bottom: 15px;
+}
+.posts {
+    background: white;
+    padding: 10px;
+    border: 3px solid;
+    margin:0px;
+    
+}
+a {
+    text-decoration: underline;
+    color: rgb(69, 69, 73);
+}
+ul li {
+    margin-left: -15px;
+}
+ul li a{
+    text-decoration: none;
+}
+ul li.ig {
+    list-style-image: url("instagram-logo.webp");
+}
+ul li.linked {
+    list-style-image: url("linkedinlogo.png");
+} 
+ul li.email { 
+    list-style-type: lower-greek;
+}
